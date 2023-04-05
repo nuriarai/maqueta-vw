@@ -1,0 +1,45 @@
+@use "../base/variables" as vars;
+@use "../base/mixins" as mix;
+
+.widget__header {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 35px;
+  @include mix.bkp(md) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: unset;
+  }
+}
+
+.widget__view-switcher {
+  display: none;
+  @include mix.bkp(md) {
+    display: block;
+  }
+}
+
+.widget__sort-switcher {
+  align-self: flex-end;
+  @include mix.bkp(md) {
+    align-self: unset;
+  }
+}
+
+.widget__title {
+  text-align: center;
+  margin-bottom: 0;
+
+  @include mix.bkp(md) {
+    &:after {
+      content: "";
+      display: block;
+      border-bottom: 4px solid vars.$contrast-color;
+      width: 72px;
+      margin: 0 auto;
+      padding-top: 10px;
+    }
+  }
+}

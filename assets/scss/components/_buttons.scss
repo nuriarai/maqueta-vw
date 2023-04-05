@@ -1,0 +1,21 @@
+@use "../base/variables" as vars;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: vars.$light-color;
+  font-weight: 600;
+  height: 36px;
+  background-color: vars.$contrast-color;
+  border: 1px solid vars.$contrast-color;
+  border-radius: 4px;
+  max-width: 143px;
+  font-size: 1rem;
+}
+
+.button--transparent {
+  border-color: vars.$soft-gray-color;
+  background-color: transparent;
+  color: vars.$primary-color;
+}
