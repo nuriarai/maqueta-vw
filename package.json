@@ -1,0 +1,25 @@
+{
+  "name": "testvw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass-compile": "sass assets/scss/styles.scss assets/css/styles.css",
+    "sass-watch": "sass assets/scss/styles.scss assets/css/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nuriarai/maqueta-vw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nuriarai/maqueta-vw.git/issues"
+  },
+  "homepage": "",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
