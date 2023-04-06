@@ -23,6 +23,7 @@
 
 .widget__sort-switcher {
   align-self: flex-end;
+  width: 150px;
   @include mix.bkp(md) {
     align-self: unset;
   }

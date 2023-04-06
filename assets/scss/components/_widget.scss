@@ -1,12 +1,12 @@
 @use "../base/variables" as vars;
 @use "../base/mixins" as mix;
 
-.item__rating {
-  display: none;
-  @include mix.bkp(md) {
-    display: block;
-    color: vars.$stars-color;
-  }
+.widget {
+  padding-top: 45px;
+  padding-bottom: 15px;
+  background: no-repeat url("/assets/images/bg-figure.png") center center;
+  height: 100%;
+  width: 100%;
 }
 
 .item {
@@ -14,6 +14,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: vars.$light-color;
   height: 56px;
   margin-bottom: 8px;
   padding-left: 21px;
@@ -23,6 +24,11 @@
   box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.2);
   @include mix.bkp(md) {
     padding: 5px 21px;
+  }
+  transition: transform 1s ease-in-out, height 0.3s ease;
+
+  &:hover {
+    transform: scale(103%);
   }
 }
 
@@ -38,6 +44,14 @@
   align-items: center;
   position: relative;
   z-index: 1;
+}
+
+.item__rating {
+  display: none;
+  @include mix.bkp(md) {
+    display: block;
+    color: vars.$stars-color;
+  }
 }
 
 .item__button-play {
@@ -116,6 +130,9 @@
     height: 292px;
     max-width: 200px;
     padding: 30px;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   .item__order {
     position: absolute;
@@ -125,6 +142,7 @@
   }
   .item-wrapper__stars-review {
     display: block;
+    z-index: 1;
     margin-left: 0;
     margin-top: -40px;
     text-align: center;
@@ -142,18 +160,8 @@
   }
 }
 
-/* transitions */
-
-.widget__list.widget__cards .item {
-  transform-origin: 0 0;
-  transform: translateX(-100px);
-
-  transition-property: transform;
-  transition-duration: 2s;
-  transition-timing-function: ease;
-}
-
-.widget__list .item {
-  transform: translateX(0);
-  opacity: 100%;
+.widget__view-all-link {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
 }
