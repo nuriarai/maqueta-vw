@@ -12,9 +12,25 @@ h1,
 h2,
 h3 {
   color: vars.$dark-color;
+  font-family: "Titillium web", Arial, Helvetica, Verdana;
 }
 
-.sr-only:not(:focus):not(:active) {
+a,
+a:visited {
+  color: vars.$text-color;
+}
+
+a:hover,
+a:focus {
+  color: vars.$hover-color;
+}
+
+:focus,
+:focus-visible {
+  outline: 1px dotted vars.$contrast-color;
+}
+
+.sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;

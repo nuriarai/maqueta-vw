@@ -1,5 +1,5 @@
 $baseFontSize: 16;
-@mixin remFS($sizeValue) {
+@mixin fontSizeRem($sizeValue) {
   font-size: ($sizeValue) * 1px;
   font-size: calc($sizeValue / $baseFontSize) * 1rem;
 }

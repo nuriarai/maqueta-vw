@@ -1,31 +1,38 @@
+@use "../base/variables" as vars;
+@use "../base/mixins" as mix;
+
 .switch {
   cursor: pointer;
   display: inline-block;
+  &:hover {
+    color: vars.$hover-color;
+  }
 }
 
 .switch-slider {
   display: inline-block;
-  background: #ccc;
-  border-radius: 16px;
-  width: 58px;
-  height: 32px;
+  background: vars.$soft-gray-color;
+  border-radius: 12px;
+  width: 45px;
+  height: 24px;
+  margin-left: 10px;
   position: relative;
   vertical-align: middle;
   transition: background 0.25s;
 }
+
 .switch-slider:before,
 .switch-slider:after {
   content: "";
 }
 .switch-slider:before {
   display: block;
-  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  background-color: vars.$light-color;
   border-radius: 50%;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   position: absolute;
-  top: 4px;
+  top: 3px;
   left: 4px;
   transition: left 0.25s;
 }
@@ -34,16 +41,16 @@
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
 }
 .switch-checkbox:checked + .switch-slider {
-  background: #56c080;
+  background-color: vars.$dark-gray-color;
 }
 .switch-checkbox:checked + .switch-slider:before {
-  left: 30px;
+  left: 23px;
 }
 
-.switch-checkbox {
+/* .switch-checkbox {
   position: absolute;
   visibility: hidden;
-}
+} */
 
 .switch-label {
   margin-left: 5px;

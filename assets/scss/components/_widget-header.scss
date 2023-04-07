@@ -14,7 +14,7 @@
   }
 }
 
-.widget__view-switcher {
+.widget__view-switcher.switch {
   display: none;
   @include mix.bkp(md) {
     display: block;
@@ -22,25 +22,57 @@
 }
 
 .widget__sort-switcher {
-  align-self: flex-end;
   width: 150px;
+  @include mix.fontSizeRem(13);
+  font-weight: 600;
+  align-self: flex-end;
+  text-align: right;
+  text-decoration: underline;
+  color: vars.$dark-gray-color;
+  cursor: pointer;
   @include mix.bkp(md) {
+    @include mix.fontSizeRem(15);
     align-self: unset;
+    text-align: left;
+  }
+}
+
+.widget__view-switcher {
+  cursor: pointer;
+  .switch-label {
+    @include mix.fontSizeRem(15);
+    font-weight: 600;
+    text-decoration: underline;
   }
 }
 
 .widget__title {
+  position: relative;
+  display: flex;
+  align-items: center;
   text-align: center;
   margin-bottom: 0;
-
+  @include mix.fontSizeRem(14);
+  font-weight: 700;
   @include mix.bkp(md) {
+    @include mix.fontSizeRem(24);
     &:after {
       content: "";
       display: block;
       border-bottom: 4px solid vars.$contrast-color;
       width: 72px;
-      margin: 0 auto;
-      padding-top: 10px;
+      align-self: center;
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      margin-left: 28px; //flag widht + flag margin right / 2
+      transform: translate(-50%);
+    }
+  }
+  @include mix.bkp(lg) {
+    @include mix.fontSizeRem(34);
+    &:after {
+      top: 48px;
     }
   }
 }

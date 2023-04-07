@@ -14,8 +14,10 @@
   font-size: 1rem;
 }
 
-.button--transparent {
-  border-color: vars.$soft-gray-color;
+.button--link {
   background-color: transparent;
-  color: vars.$primary-color;
+  border: unset;
+  &:hover {
+    color: vars.$hover-color;
+  }
 }
