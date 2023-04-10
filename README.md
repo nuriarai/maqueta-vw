@@ -1,5 +1,11 @@
 # maqueta-vw
 
+Hay que verlo con el servidor de node, para que las referencias de ficheros no fallen y no haya problemas de CORS.
+En la carpeta:
+
+npm i
+npx serve
+
 He usado SASS para poder crear una estructura de ficheros de estilos básica, basada en componentes. He usado para los colores variables de sass aunque se podrian haber usado perfectamente variables css.
 
 No he usado ningún framework como Bootstrap o Tailwind, he preferido hacerlo a mano para que veais cómo me manejo con css sin frameworks. Pero supongo que habitualmente trabajais con algun framework y no hay problema en usar el que haga falta. Yo últimamente usaba uiKit, pero había usado mucho tiempo Bootstrap. No he usado todavía en ningún proyecto Tailwind, pero lo he trasteado.
@@ -22,3 +28,8 @@ Exclusive - Bonus up tp $200 --> estos textos también los he unificado todos a 
 En cuanto a las distancias, también habría consultado con diseño qué comportamiento debían tener los elementos en las medidas intermedias, para saber si había que ser más o menos estrictos con las distancias y los tamaños.
 
 He puesto la imagen de fondo al final. Pensaba que iba a ser grande y iba a verse más allá de contenedor de 1064, pero está cortada la imagen. Lo habría consultado con diseño también, porque igual quiere decir que todo el diseño del site va dentro del contenedor de 1100 y fuera hay un fondo de otro color. Pero lo dejo así porque no dispongo de esa información.
+
+Para la compilación de SASS he usado el propio paquete de SASS:
+npm run sass-watch
+
+Núria Ramoneda
